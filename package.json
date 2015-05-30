@@ -1,0 +1,26 @@
+{
+  "name": "react-engine-blog",
+  "version": "0.0.1",
+  "main": "server.js",
+  "scripts": {
+    "start": "npm run build && node server.js",
+    "build": "rm -rf static/bundle.js; browserify -t reactify -t require-globify app.js -o static/bundle.js"
+  },
+  "author": "Brian Schemp",
+  "dependencies": {
+    "es6-promise": "^2.0.1",
+    "express": "^4.12.4",
+    "flux": "^2.0.1",
+    "node-jsx": "^0.12.4",
+    "object-assign": "^2.0.0",
+    "react": "^0.13.3",
+    "react-engine": "^1.6.0",
+    "react-router": "^0.13.3",
+    "require-globify": "^1.2.1",
+    "superagent": "^0.21.0"
+  },
+  "devDependencies": {
+    "browserify": "^9.0.7",
+    "reactify": "^1.1.0"
+  }
+}
