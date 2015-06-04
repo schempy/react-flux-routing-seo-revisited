@@ -1,10 +1,9 @@
 {
   "name": "react-engine-blog",
   "version": "0.0.1",
-  "main": "server.js",
   "scripts": {
-    "start": "npm run build && node server.js",
-    "build": "rm -rf static/bundle.js; browserify -t reactify -t require-globify app.js -o static/bundle.js"
+    "start": "npm run build && node server/app.js",
+    "build": "rm -rf static/bundle.js; browserify -t reactify -t require-globify src/app.js -o static/bundle.js"
   },
   "author": "Brian Schemp",
   "dependencies": {

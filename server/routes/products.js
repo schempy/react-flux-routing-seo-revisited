@@ -2,11 +2,12 @@
 
 var express = require('express');
 var router = express.Router();
-var products = require('../../data/products');
-var categories = require('../../data/categories');
+var products = require('../data/products');
+var categories = require('../data/categories');
 
 router.get('/:product', function(req, res) {
 	res.render('/products' + req.url, {
+		title: 'Products for ' + req.params.product,
 		categories: categories,
 		products: products[req.params.product]
 	});
